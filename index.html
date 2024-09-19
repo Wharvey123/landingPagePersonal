@@ -1,13 +1,174 @@
 <!doctype html>
-<html lang="es">
+<html lang="ca">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="style.css" rel="stylesheet">
-  <title>Tenda de Informática</title>
+  <title>Tenda d'Informàtica</title>
 </head>
 <body>
-<div id="app"></div>
-<script type="module" src="/main.js"></script>
+<div class="bg-white">
+  <header class="absolute inset-x-0 top-0 z-50">
+    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <div class="flex lg:flex-1">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">La teva empresa</span>
+          <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Logo de la tenda">
+        </a>
+      </div>
+      <div class="flex lg:hidden">
+        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+          <span class="sr-only">Obrir menú principal</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Productes</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Característiques</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Botiga</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Empresa</a>
+      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Iniciar sessió <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </nav>
+    <!-- Menú mòbil, mostrar/amagar en funció de l'estat del menú -->
+    <div class="lg:hidden" role="dialog" aria-modal="true">
+      <div class="fixed inset-0 z-50"></div>
+      <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div class="flex items-center justify-between">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">La teva empresa</span>
+            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Logo de la tenda">
+          </a>
+          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Tancar menú</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="space-y-2 py-6">
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Productes</a>
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Característiques</a>
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Botiga</a>
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Empresa</a>
+            </div>
+            <div class="py-6">
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Iniciar sessió</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="relative isolate px-6 pt-14 lg:px-8">
+      <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+        <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+          <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+            Presentem la nostra nova línia de finançament. <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Llegeix més <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="text-center">
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Dades per millorar el teu negoci en línia</h1>
+          <p class="mt-6 text-lg leading-8 text-gray-600">Oferim solucions d'informàtica per a empreses i particulars. Equipaments, software i serveis tècnics d'alta qualitat.</p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Comença ara</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Més informació <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+        <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-200">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Informació de la tenda -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Sobre nosaltres</h3>
+          <p class="text-gray-400">Som una tenda d'informàtica dedicada a oferir els millors productes i serveis per a empreses i particulars. La nostra missió és proporcionar solucions tecnològiques de qualitat.</p>
+        </div>
+        <!-- Enllaços ràpids -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Enllaços Ràpids</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white">Productes</a></li>
+            <li><a href="#" class="hover:text-white">Característiques</a></li>
+            <li><a href="#" class="hover:text-white">Botiga</a></li>
+            <li><a href="#" class="hover:text-white">Contacte</a></li>
+          </ul>
+        </div>
+        <!-- Contacte -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Contacte</h3>
+          <ul class="space-y-2">
+            <li>
+              <svg class="inline h-6 w-6 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v4M3 5l3 3m0 0l3-3m-3 3V21m0 0h12M21 5h-3m3 0l-3 3m3-3l3 3" />
+              </svg>
+              Carrer de IES, 123, Tortosa
+            </li>
+            <li>
+              <svg class="inline h-6 w-6 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-18 8v-6a2 2 0 012-2h3m4 0h4m-4 0v6m4-6v6" />
+              </svg>
+              +34 123 456 789
+            </li>
+            <li>
+              <svg class="inline h-6 w-6 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 01-5 0V12m5 0H5" />
+              </svg>
+              info@tendainformatica.cat
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-gray-700 pt-8 flex flex-col md:flex-row items-center justify-between">
+        <p class="text-sm text-gray-400">&copy; 2024 Tenda d'Informàtica. Tots els drets reservats.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#" class="text-gray-400 hover:text-white">
+            <span class="sr-only">Facebook</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.325v21.351C0 23.403.597 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.764v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.403 24 24 23.403 24 22.676V1.325C24 .597 23.403 0 22.675 0z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white">
+            <span class="sr-only">Twitter</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 4.557a9.93 9.93 0 01-2.828.775 4.932 4.932 0 002.165-2.724c-.951.555-2.005.959-3.127 1.184a4.916 4.916 0 00-8.38 4.482A13.944 13.944 0 011.671 3.149a4.916 4.916 0 001.523 6.573A4.902 4.902 0 01.964 9.1v.062a4.916 4.916 0 003.946 4.816 4.996 4.996 0 01-2.212.084 4.918 4.918 0 004.588 3.417A9.867 9.867 0 010 19.54a13.94 13.94 0 007.548 2.213c9.056 0 14.01-7.496 14.01-13.986 0-.213-.005-.425-.014-.636A10.025 10.025 0 0024 4.557z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white">
+            <span class="sr-only">Instagram</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.31.975.976 1.248 2.243 1.31 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.31 3.608-.976.975-2.243 1.248-3.608 1.31-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.31-.975-.976-1.248-2.243-1.31-3.608C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.31-3.608C4.52 2.497 5.787 2.224 7.153 2.163 8.419 2.105 8.799 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.77.131 4.588.38 3.6 1.368 2.612 2.356 2.363 3.538 2.304 4.82 2.245 6.1 2.232 6.51 2.232 12c0 5.49.013 5.9.072 7.18.059 1.282.308 2.464 1.296 3.452.988.988 2.17 1.237 3.452 1.296 1.28.059 1.69.072 7.18.072s5.9-.013 7.18-.072c1.282-.059 2.464-.308 3.452-1.296.988-.988 1.237-2.17 1.296-3.452.059-1.28.072-1.69.072-7.18s-.013-5.9-.072-7.18c-.059-1.282-.308-2.464-1.296-3.452C19.464.38 18.282.131 17 .072 15.72.013 15.31 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm6.406-11.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white">
+            <span class="sr-only">LinkedIn</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.25c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.25h-3v-5.604c0-1.338-.027-3.064-1.87-3.064-1.872 0-2.158 1.46-2.158 2.967v5.698h-3v-10h2.882v1.366h.041c.402-.76 1.386-1.562 2.85-1.562 3.049 0 3.612 2.007 3.612 4.623v5.568z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
 </body>
 </html>
